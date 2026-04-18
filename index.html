@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavestyle Construction Ltd | Driveways, Patios & Landscaping | Derbyshire</title>
+    <meta name="description" content="Pavestyle Construction Ltd - Your local experts in driveways, patios, and landscaping. Over 30 years experience. Resin, block paving, tarmac and garden design. Alfreton, Derbyshire. Call 07428 371704.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- LOGO: Right-click save from https://www.facebook.com/photo/?fbid=122102327552877680&set=a.122102324804877680 → photos/logo.png -->
+    <!-- HERO: Right-click save cover photo from FB page → photos/hero.jpg -->
+    <!-- PHOTO 1 (job): https://www.facebook.com/photo/?fbid=122143855316877680 → photos/photo_1.jpg -->
+    <!-- PHOTO 2 (job): https://www.facebook.com/photo/?fbid=122143570910877680 → photos/photo_2.jpg -->
+    <!-- BEFORE 1: https://www.facebook.com/photo/?fbid=122143855328877680 → photos/before_1.jpg -->
+    <!-- AFTER 1: https://www.facebook.com/photo/?fbid=122143855322877680 → photos/after_1.jpg -->
+    <!-- AFTER 2: https://www.facebook.com/photo/?fbid=122143570898877680 → photos/after_2.jpg -->
+    <!-- EXISTING SITE PAGES TO PRESERVE:
+      - / (home)
+      - /our-services/
+      - /testimonials/
+      - /gallery/
+      - /contact-us/
+      When migrating, create 301 redirects from old URLs to new sections
+    -->
+    <style>
+        :root {
+            --primary: #0EA5E9;
+            --primary-dark: #0284C7;
+            --secondary: #4A4A4A;
+            --accent: #F59E0B;
+            --dark: #1E293B;
+            --light: #F8FAFC;
+            --white: #FFFFFF;
+            --grey: #64748B;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; color: var(--dark); line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
+
+        /* NAV */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            padding: 0.6rem 2rem; display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+        .nav-logo img { height: 45px; }
+        .nav-logo-text { font-family: 'Montserrat'; font-weight: 800; font-size: 1.2rem; color: var(--primary); letter-spacing: -0.5px; }
+        .nav-logo-text span { color: var(--secondary); }
+        .nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--secondary); font-weight: 600; font-size: 0.9rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+        .nav-cta { background: var(--primary); color: white !important; padding: 0.6rem 1.4rem; border-radius: 6px; font-weight: 700; }
+        .nav-cta:hover { background: var(--primary-dark); }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center; padding: 7rem 2rem 4rem;
+            background: linear-gradient(135deg, var(--dark) 0%, #0F172A 100%);
+            position: relative; overflow: hidden; color: white;
+        }
+        .hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: url('photos/hero.jpg') center/cover no-repeat;
+            opacity: 0.3;
+        }
+        .hero::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(135deg, rgba(14,165,233,0.15) 0%, rgba(30,41,59,0.9) 100%);
+        }
+        .hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .hero h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.1; margin-bottom: 1rem; }
+        .hero h1 span { color: var(--primary); }
+        .hero-sub { font-size: 1.15rem; opacity: 0.85; margin-bottom: 1.5rem; max-width: 500px; }
+        .hero-badges { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(14,165,233,0.15); border: 1px solid rgba(14,165,233,0.3); color: var(--primary); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.82rem; font-weight: 600; }
+        .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; border-radius: 8px; font-weight: 700; text-decoration: none; transition: all 0.3s; border: none; cursor: pointer; font-size: 1rem; }
+        .btn-primary { background: var(--primary); color: white; box-shadow: 0 4px 15px rgba(14,165,233,0.3); }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .btn-outline { border: 2px solid rgba(255,255,255,0.3); color: white; background: transparent; }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); }
+        .hero-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 2rem; backdrop-filter: blur(10px); }
+        .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .stat { text-align: center; }
+        .stat-num { font-family: 'Montserrat'; font-size: 2.2rem; font-weight: 800; color: var(--primary); }
+        .stat-label { font-size: 0.8rem; opacity: 0.6; margin-top: 0.2rem; }
+
+        /* SECTIONS */
+        .section { padding: 5rem 2rem; }
+        .section-header { text-align: center; max-width: 650px; margin: 0 auto 3.5rem; }
+        .section-header h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 0.6rem; }
+        .section-header p { color: var(--grey); font-size: 1.05rem; }
+        .section-tag { display: inline-block; background: rgba(14,165,233,0.1); color: var(--primary); padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 0.8rem; }
+
+        /* SERVICES */
+        .services { background: var(--light); }
+        .services-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .service-card { background: white; border-radius: 12px; padding: 2.5rem 2rem; text-align: center; transition: transform 0.3s, box-shadow 0.3s; border: 1px solid #E2E8F0; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-color: var(--primary); }
+        .service-icon { width: 65px; height: 65px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 14px; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; }
+        .service-card h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+        .service-card p { color: var(--grey); font-size: 0.9rem; }
+
+        /* BEFORE/AFTER */
+        .before-after { background: var(--dark); color: white; }
+        .before-after .section-header h2 { color: white; }
+        .before-after .section-header p { color: rgba(255,255,255,0.6); }
+        .ba-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .ba-card { border-radius: 12px; overflow: hidden; position: relative; }
+        .ba-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; background: linear-gradient(135deg, #334155, #1E293B); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.3); font-size: 1.2rem; }
+        .ba-img img { width: 100%; height: 100%; object-fit: cover; }
+        .ba-label { position: absolute; top: 1rem; left: 1rem; background: var(--primary); color: white; padding: 0.3rem 1rem; border-radius: 6px; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .ba-label.before { background: #EF4444; }
+
+        /* GALLERY */
+        .gallery-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+        .gallery-item { aspect-ratio: 4/3; border-radius: 10px; overflow: hidden; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); display: flex; align-items: center; justify-content: center; transition: transform 0.3s; }
+        .gallery-item:hover { transform: scale(1.03); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+        .gallery-item:first-child { grid-column: span 2; grid-row: span 2; }
+
+        /* REVIEWS */
+        .reviews { background: var(--light); }
+        .reviews-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .review-card { background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid #E2E8F0; position: relative; }
+        .review-card::before { content: '\201C'; font-size: 4rem; color: var(--primary); opacity: 0.15; position: absolute; top: 0.5rem; left: 1.2rem; font-family: serif; }
+        .review-stars { color: var(--accent); margin-bottom: 0.8rem; font-size: 1.1rem; }
+        .review-text { color: var(--grey); font-size: 0.92rem; margin-bottom: 1.2rem; font-style: italic; line-height: 1.7; }
+        .reviewer { font-weight: 700; font-size: 0.88rem; }
+        .reviewer span { color: var(--grey); font-weight: 400; }
+        .review-source { display: inline-flex; align-items: center; gap: 0.3rem; background: #F1F5F9; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; color: var(--grey); margin-top: 0.5rem; }
+
+        /* CTA BANNER */
+        .cta-banner { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; text-align: center; padding: 4rem 2rem; }
+        .cta-banner h2 { font-size: 2rem; font-weight: 800; margin-bottom: 0.8rem; }
+        .cta-banner p { opacity: 0.9; margin-bottom: 2rem; font-size: 1.1rem; }
+        .cta-banner .btn { background: white; color: var(--primary); font-size: 1.1rem; padding: 1rem 2.5rem; }
+        .cta-banner .btn:hover { background: #F0F9FF; transform: translateY(-2px); }
+
+        /* CONTACT */
+        .contact { background: var(--dark); color: white; padding: 5rem 2rem; }
+        .contact .section-header h2 { color: white; }
+        .contact .section-header p { color: rgba(255,255,255,0.6); }
+        .contact-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+        .contact-item { display: flex; align-items: center; gap: 1rem; }
+        .contact-icon { width: 50px; height: 50px; background: var(--primary); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+        .contact-item h4 { font-size: 0.82rem; opacity: 0.5; margin-bottom: 0.1rem; font-weight: 400; }
+        .contact-item p { font-size: 1rem; font-weight: 600; }
+        .contact-item a { color: white; text-decoration: none; }
+        .contact-item a:hover { color: var(--primary); }
+        .contact-map { border-radius: 12px; overflow: hidden; min-height: 300px; }
+        .contact-map iframe { width: 100%; height: 100%; border: 0; }
+
+        /* FOOTER */
+        footer { background: #0F172A; color: rgba(255,255,255,0.4); padding: 2rem; text-align: center; font-size: 0.85rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+
+        .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--secondary); }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero-inner { grid-template-columns: 1fr; text-align: center; }
+            .hero h1 { font-size: 2.4rem; }
+            .hero-sub { margin: 0 auto 1.5rem; }
+            .hero-badges { justify-content: center; }
+            .hero-btns { justify-content: center; }
+            .services-grid, .reviews-grid { grid-template-columns: 1fr; }
+            .ba-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr 1fr; }
+            .gallery-item:first-child { grid-column: span 2; grid-row: span 1; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#" class="nav-logo">
+        <!-- Replace with <img src="photos/logo.png" alt="Pavestyle"> when logo saved -->
+        <div class="nav-logo-text">PAVE<span>STYLE</span></div>
+    </a>
+    <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Our Work</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="tel:07428371704" class="nav-cta">&#128222; 07428 371 704</a></li>
+    </ul>
+    <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')">&#9776;</button>
+</nav>
+
+<section class="hero">
+    <div class="hero-inner">
+        <div>
+            <h1>Your Local <span>Driveway &amp; Patio</span> Experts</h1>
+            <p class="hero-sub">Over 30 years of experience delivering top-quality driveways, patios, and landscaping across Derbyshire. Resin, block paving, tarmac and garden design solutions.</p>
+            <div class="hero-badges">
+                <div class="hero-badge">&#127942; 30+ Years Experience</div>
+                <div class="hero-badge">&#11088; 4.9 Stars on Google</div>
+                <div class="hero-badge">&#9989; Free Quotes</div>
+            </div>
+            <div class="hero-btns">
+                <a href="tel:07428371704" class="btn btn-primary">&#128222; Call 07428 371 704</a>
+                <a href="#services" class="btn btn-outline">Our Services</a>
+            </div>
+        </div>
+        <div class="hero-card">
+            <div class="hero-stats">
+                <div class="stat"><div class="stat-num">30+</div><div class="stat-label">Years Experience</div></div>
+                <div class="stat"><div class="stat-num">4.9</div><div class="stat-label">Google Rating</div></div>
+                <div class="stat"><div class="stat-num">42</div><div class="stat-label">5-Star Reviews</div></div>
+                <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Free Quotes</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section services" id="services">
+    <div class="section-header">
+        <div class="section-tag">What We Do</div>
+        <h2>Our Services</h2>
+        <p>Complete driveway, patio, and landscaping solutions built to last.</p>
+    </div>
+    <div class="services-grid">
+        <div class="service-card"><div class="service-icon">&#127968;</div><h3>Block Paving</h3><p>Premium block paving driveways in a variety of styles, patterns and colours. Built on proper foundations to last decades.</p></div>
+        <div class="service-card"><div class="service-icon">&#10024;</div><h3>Resin Driveways</h3><p>Modern resin-bound driveways that are permeable, low-maintenance and look stunning. UV stable with no loose stones.</p></div>
+        <div class="service-card"><div class="service-icon">&#127795;</div><h3>Patios &amp; Landscaping</h3><p>Beautiful patio areas and full garden transformations. From natural stone to porcelain, designed to your vision.</p></div>
+        <div class="service-card"><div class="service-icon">&#128739;</div><h3>Tarmac Driveways</h3><p>Hard-wearing tarmac driveways for a clean, practical finish. Perfect for larger areas and commercial properties.</p></div>
+        <div class="service-card"><div class="service-icon">&#127807;</div><h3>Garden Design</h3><p>Complete garden makeovers including paths, borders, edging, fencing and planting to complement your new driveway.</p></div>
+        <div class="service-card"><div class="service-icon">&#128167;</div><h3>Drainage Solutions</h3><p>Proper drainage channels and soakaways to keep your driveway and property protected from standing water.</p></div>
+    </div>
+</section>
+
+<section class="section before-after" id="work">
+    <div class="section-header">
+        <div class="section-tag" style="background:rgba(14,165,233,0.2);">Transformations</div>
+        <h2>Before &amp; After</h2>
+        <p>See the difference quality paving makes. Real projects, real results.</p>
+    </div>
+    <div class="ba-grid">
+        <div class="ba-card">
+            <div class="ba-img">
+                <img src="photos/before_1.jpg" alt="Before - old cracked paving" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'padding:3rem;text-align:center;color:rgba(255,255,255,0.4)\'>Before photo — save from Facebook</div>'">
+            </div>
+            <div class="ba-label before">Before</div>
+        </div>
+        <div class="ba-card">
+            <div class="ba-img">
+                <img src="photos/after_1.jpg" alt="After - new block paving" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'padding:3rem;text-align:center;color:rgba(255,255,255,0.4)\'>After photo — save from Facebook</div>'">
+            </div>
+            <div class="ba-label">After</div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="gallery">
+    <div class="section-header">
+        <div class="section-tag">Portfolio</div>
+        <h2>Recent Projects</h2>
+        <p>A selection of our latest driveway, patio and landscaping work.</p>
+    </div>
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="photos/photo_1.jpg" alt="Herringbone block paving" onerror="this.style.display='none'"></div>
+        <div class="gallery-item"><img src="photos/photo_2.jpg" alt="Garden path with timber edging" onerror="this.style.display='none'"></div>
+        <div class="gallery-item"><img src="photos/after_2.jpg" alt="Finished garden passage" onerror="this.style.display='none'"></div>
+    </div>
+</section>
+
+<section class="section reviews" id="reviews">
+    <div class="section-header">
+        <div class="section-tag">Testimonials</div>
+        <h2>What Our Customers Say</h2>
+        <p>4.9 stars from 42 reviews on Google. Here's what people think.</p>
+    </div>
+    <div class="reviews-grid">
+        <div class="review-card">
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-text">"The driveway looks amazing and was done to a really high standard. Very professional team and the whole process was smooth from start to finish."</p>
+            <div class="reviewer">Google Reviewer <span>&bull; Verified</span></div>
+            <div class="review-source">&#127760; Google Review</div>
+        </div>
+        <div class="review-card">
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-text">"Excellent workmanship and attention to detail. They transformed our tired old patio into something beautiful. Would highly recommend to anyone."</p>
+            <div class="reviewer">Google Reviewer <span>&bull; Verified</span></div>
+            <div class="review-source">&#127760; Google Review</div>
+        </div>
+        <div class="review-card">
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-text">"From the initial quote to the finished job, everything was handled professionally. The team were punctual, tidy and the result speaks for itself."</p>
+            <div class="reviewer">Google Reviewer <span>&bull; Verified</span></div>
+            <div class="review-source">&#127760; Google Review</div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-banner">
+    <h2>Ready to Transform Your Driveway?</h2>
+    <p>Get a free, no-obligation quote today. Over 30 years of experience in Derbyshire.</p>
+    <a href="tel:07428371704" class="btn">&#128222; Call 07428 371 704</a>
+</section>
+
+<section class="contact" id="contact">
+    <div class="section-header">
+        <div class="section-tag" style="background:rgba(14,165,233,0.2);">Get In Touch</div>
+        <h2>Contact Us</h2>
+        <p>Free quotes with no obligation. Call, email or drop us a message.</p>
+    </div>
+    <div class="contact-grid">
+        <div class="contact-info">
+            <div class="contact-item"><div class="contact-icon">&#128222;</div><div><h4>Phone</h4><p><a href="tel:07428371704">07428 371 704</a></p></div></div>
+            <div class="contact-item"><div class="contact-icon">&#128231;</div><div><h4>Email</h4><p><a href="mailto:pavestyle25@gmail.com">pavestyle25@gmail.com</a></p></div></div>
+            <div class="contact-item"><div class="contact-icon">&#128205;</div><div><h4>Location</h4><p>Alfreton, Derbyshire DE55 2HP</p></div></div>
+            <div class="contact-item"><div class="contact-icon">&#128337;</div><div><h4>Availability</h4><p>Always open for enquiries</p></div></div>
+            <div class="contact-item"><div class="contact-icon">&#128172;</div><div><h4>WhatsApp</h4><p><a href="https://wa.me/447428371704">Message us on WhatsApp</a></p></div></div>
+        </div>
+        <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9660!2d-1.38!3d53.09!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAlfreton%2C+Derbyshire!5e0!3m2!1sen!2suk!4v1" allowfullscreen loading="lazy"></iframe>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Pavestyle Construction Ltd &bull; Driveways, Patios &amp; Landscaping &bull; Derbyshire</p>
+    <p style="margin-top:0.4rem;">Website by <a href="https://innov8workflows.co.uk" target="_blank">Innov8 Workflows</a></p>
+</footer>
+
+</body>
+</html>

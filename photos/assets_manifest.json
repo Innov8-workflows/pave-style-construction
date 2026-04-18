@@ -1,0 +1,53 @@
+{
+  "source": "facebook",
+  "source_url": "https://www.facebook.com/pavestyleconstructionltd",
+  "harvested_at": "2026-04-19T11:45:00Z",
+  "brand_colours": {
+    "primary": "#0EA5E9",
+    "secondary": "#4A4A4A",
+    "accent": "#A0A0A0",
+    "background": "#F5F5F5"
+  },
+  "files": {
+    "logo.png": {
+      "role": "logo",
+      "from": "profile_pic",
+      "fb_url": "https://www.facebook.com/photo/?fbid=122102327552877680&set=a.122102324804877680",
+      "bg_removed": false,
+      "notes": "Blue/cyan and grey geometric logo with PAVESTYLE CONSTRUCTION LTD text + website URL"
+    },
+    "hero.jpg": {
+      "role": "hero",
+      "from": "cover_photo",
+      "notes": "Block paving with circular photo insets showing various work types"
+    },
+    "photo_1.jpg": {
+      "role": "job",
+      "fb_url": "https://www.facebook.com/photo/?fbid=122143855316877680",
+      "caption_hint": "Close-up herringbone block paving with drainage channel"
+    },
+    "photo_2.jpg": {
+      "role": "job",
+      "fb_url": "https://www.facebook.com/photo/?fbid=122143570910877680",
+      "caption_hint": "Garden path with block paving and timber edging"
+    },
+    "before_1.jpg": {
+      "role": "before",
+      "pair_id": 1,
+      "fb_url": "https://www.facebook.com/photo/?fbid=122143855328877680",
+      "caption_hint": "Old weedy concrete slabs in side passage"
+    },
+    "after_1.jpg": {
+      "role": "after",
+      "pair_id": 1,
+      "fb_url": "https://www.facebook.com/photo/?fbid=122143855322877680",
+      "caption_hint": "New dark herringbone block paving - same side passage transformed"
+    },
+    "after_2.jpg": {
+      "role": "after",
+      "pair_id": 2,
+      "fb_url": "https://www.facebook.com/photo/?fbid=122143570898877680",
+      "caption_hint": "Garden side passage with new block paving path"
+    }
+  }
+}
